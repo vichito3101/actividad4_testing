@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio de Sesión</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    form { display: flex; flex-direction: column; width: 300px; gap: .5rem; }
+    input, button { padding: 8px; font-size: 1rem; }
+    #mensaje { color: #c00; margin-top: 1rem; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Inicio de Sesión</h1>
+  <form id="loginForm">
+  <input id="email" type="email" name="email" placeholder="Correo electrónico" required />
+  <input id="password" type="password" name="password" placeholder="Contraseña" required />
+  <button type="submit">Iniciar Sesión</button>
+  <button type="button" id="btnGoRegister">Crear cuenta</button>
+</form>
+<div id="mensaje"></div>
+
+<script src="/js/login.js" defer></script>
+</body>
+</html>

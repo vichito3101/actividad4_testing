@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crear cuenta</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    form { display: grid; gap: .75rem; max-width: 520px; }
+    input, select, button { padding: .6rem .8rem; font-size: 1rem; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+    #msg { font-weight: bold; margin-top: .25rem; }
+    .ok { color: #0a0; } .error { color: #c00; }
+  </style>
+</head>
+<body>
+  <h1>Registro de usuario</h1>
+
+  <form id="frmRegister">
+    <div class="row">
+      <input id="nombre" placeholder="Nombre" required />
+      <input id="apellido" placeholder="Apellido" required />
+    </div>
+
+    <div class="row">
+      <input id="nro_documento" placeholder="Nro documento (DNI)" required />
+      <input id="edad" type="number" min="0" placeholder="Edad" required />
+    </div>
+
+    <div class="row">
+      <input id="email" type="email" placeholder="correo@dominio.com" required />
+      <input id="password" type="password" placeholder="Contraseña" required />
+    </div>
+
+    <div class="row">
+      <select id="rol">
+        <option value="cliente">cliente</option>
+        <option value="admin">admin</option>
+      </select>
+      <button type="submit">Crear cuenta</button>
+    </div>
+
+    <div id="msg"></div>
+
+    <div>
+      <button type="button" id="btnBackLogin">Volver al login</button>
+    </div>
+  </form>
+
+  <script src="/js/register.js" defer></script>
+
+</body>
+</html>

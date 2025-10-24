@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo de Productos</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    header { display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+    h1 { margin: 0; }
+    .controls { display:flex; gap:.5rem; align-items:center; }
+    select, button { padding:.5rem .7rem; font-size: 1rem; }
+    table { border-collapse: collapse; width: 100%; margin-top: .5rem; }
+    th, td { border: 1px solid #333; padding: 6px 10px; text-align: left; }
+    th { background: #f3f3f3; }
+    #msg { margin-top:.75rem; font-weight: bold; color:#c00; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Catálogo de Productos</h1>
+    <div class="controls">
+      <label for="fCategoria">Categoría:</label>
+      <select id="fCategoria">
+        <option value="Todas">Todas</option>
+      </select>
+      <button id="btnLimpiar">Mostrar todos</button>
+      <button id="btnLogout" title="Cerrar sesión">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <table id="tabla">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Categoría</th>
+        <th>Precio (S/)</th>
+        <th>Stock</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div id="msg"></div>
+
+  <script src="/js/productos.js" defer></script>
+</body>
+</html>
